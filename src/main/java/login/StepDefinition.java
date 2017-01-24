@@ -16,7 +16,7 @@ public class StepDefinition {
 		driver.get("http://automationpractice.com/index.php?controller=authentication&back=my-account");
 	}
 	
-	@When("^I enter \"([^\"]*)\" and \"([^\"]*)\"$")
+	@When("^I enter (.*) and (.*)$")
     public void i_enter_email_and_password(String emailID, String passWD){
     	driver.findElement(By.id("email")).sendKeys(emailID);
     	driver.findElement(By.id("passwd")).sendKeys(passWD);
